@@ -8,8 +8,8 @@ Features:
 
 - HJKL moved one key to the right so they are in the natural
 resting position of your right hand fingers.
-- Shift is to the left of spacebar: no modifiers for your pinky!
-- All ASCII characters are accessible in the base and symbol layers.
+- Shift is to the left of spacebar.
+- All ASCII characters are accessible in the base, SHIFT, and SYMBOL layers.
 - extra layer with several dead keys and macros (Linux compatible only)
 
 
@@ -36,7 +36,7 @@ Layers:
 	|------+------+------+------+------+------+------+------+------+------+------+------|
 	| Esc  |   Z  |   X  |   C  |   V  |   B  |   N  |   _  |   ;  |   :  |   `  |Enter |
 	|------+------+------+------+------+-------------+------+------+------+------+------|
-	| Left | Down |  Alt |  GUI | Shift|    Space    |SYMBOL| Ctrl | MACRO|  Up  |Right |
+	| Left | Down |  Alt | CTRL | Shift|    Space    |SYMBOL| GUI  | MACRO|  Up  |Right |
 	`-----------------------------------------------------------------------------------'
 
 - SYMBOL: Remaining ASCII characters.
@@ -51,9 +51,7 @@ Layers:
 	|      |      | ---- | ---- | RAISE|    -----    | ---- | ---- |      |      |      |
 	`-----------------------------------------------------------------------------------'
 
-- MACRO = BASE + SHIFT: Non-essential symbols, dead keys and function keys.
-Requires the menu key to be configured as the compose key to work properly:
-	setxkbmap -layout us -option compose:menu
+- MACRO = SHIFT + SYMBOL: Non-essential symbols, dead keys and function keys.
 
 	,-----------------------------------------------------------------------------------.
 	| F12  | F1   | F2   | F3   | F4   | F5   | F6   | F7   | F8   | F9   | F10  | F11  |

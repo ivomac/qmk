@@ -12,6 +12,7 @@ enum planck_layers {
 	SHIFT,
 	SYMBOL,
 	MACRO,
+	MOUSE,
 };
 
 enum custom_keycodes {
@@ -48,10 +49,10 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[BASE] = LAYOUT_planck_mit(
-			KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,     KC_T,      KC_Y,          KC_U,       KC_I,    KC_O,    KC_P,     KC_BSPC,
-			KC_SLASH, KC_A,    KC_S,    KC_D,    KC_F,     KC_G,      KC_M,          KC_H,       KC_J,    KC_K,    KC_L,     KC_BSLASH,
-			KC_ESC,   KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,      KC_N,          KC_MINUS,   KC_COMM, KC_DOT,  KC_QUOTE, KC_ENT,
-			KC_LEFT,  KC_DOWN, KC_LALT, KC_LCTL, LM(SHIFT, MOD_LSFT), /***/  KC_SPC, MO(SYMBOL), KC_LGUI, KC_HYPR, KC_UP,    KC_RGHT
+			KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,     KC_T,      KC_Y,          KC_U,       KC_I,    KC_O,      KC_P,     KC_BSPC,
+			KC_SLASH, KC_A,    KC_S,    KC_D,    KC_F,     KC_G,      KC_M,          KC_H,       KC_J,    KC_K,      KC_L,     KC_BSLASH,
+			KC_ESC,   KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,      KC_N,          KC_MINUS,   KC_COMM, KC_DOT,    KC_QUOTE, KC_ENT,
+			KC_LEFT,  KC_DOWN, KC_LALT, KC_LCTL, LM(SHIFT, MOD_LSFT), /***/  KC_SPC, MO(SYMBOL), KC_LGUI, TG(MOUSE), KC_UP,    KC_RGHT
 			),
 
 
@@ -77,6 +78,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			_______,   _______,   _______,     _______,  _______,     M_DEGREE, _______, _______,  M_GLEFT,      M_GRIGHT,      _______, _______,
 			XXXXXXX,   XXXXXXX,   XXXXXXX,     XXXXXXX,  _______,     /***/     _______, XXXXXXX,  XXXXXXX,      _______,       _______, RESET
 			),
+
+
+	[MOUSE] = LAYOUT_planck_mit(
+			_______, _______, KC_MS_WH_DOWN, KC_MS_WH_UP, _______,    _______, _______, _______,      _______,      _______,      _______,     _______,
+			_______, _______, KC_MS_BTN3,    KC_MS_BTN1,  KC_MS_BTN2, _______, _______, KC_MS_LEFT,   KC_MS_DOWN,   KC_MS_UP,     KC_MS_RIGHT, _______,
+			_______, _______, KC_MS_BTN5,    KC_MS_BTN4,  _______,    _______, _______, KC_MS_ACCEL0, KC_MS_ACCEL1, KC_MS_ACCEL2, _______,     _______,
+			_______, _______, _______,       _______,     _______,    /***/    _______, _______, _______,      _______,      _______,      _______
+			),
+
+
 
 };
 
