@@ -50,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[BASE] = LAYOUT_planck_mit(
 			KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,     KC_T,      KC_Y,          KC_U,       KC_I,    KC_O,      KC_P,     KC_BSPC,
-			KC_SLASH, KC_A,    KC_S,    KC_D,    KC_F,     KC_G,      KC_M,          KC_H,       KC_J,    KC_K,      KC_L,     KC_BSLASH,
+			KC_SLASH, KC_A,    KC_S,    KC_D,    KC_F,     KC_G,      KC_M,          KC_H,       KC_J,    KC_K,      KC_L,     KC_BACKSLASH,
 			KC_ESC,   KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,      KC_N,          KC_MINUS,   KC_COMM, KC_DOT,    KC_QUOTE, KC_ENT,
 			KC_LEFT,  KC_DOWN, KC_LALT, KC_LCTL, LM(SHIFT, MOD_LSFT), /***/  KC_SPC, MO(SYMBOL), KC_LGUI, TG(MOUSE), KC_UP,    KC_RGHT
 			),
@@ -59,24 +59,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[SHIFT] = LAYOUT_planck_mit(
 			_______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,   _______, _______,
 			_______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,   _______, KC_1,
-			_______, _______, _______, _______, _______, _______, _______, _______, M_SCOLON, KC_SCOLON, M_GRAVE, _______,
+			_______, _______, _______, _______, _______, _______, _______, _______, M_SCOLON, KC_SEMICOLON, M_GRAVE, _______,
 			_______, _______, _______, _______, _______, /***/    _______, _______, _______,  _______,   _______, _______
 			),
 
 
 	[SYMBOL] = LAYOUT_planck_mit(
 			_______, KC_1,          KC_2,       KC_3,           KC_4,          KC_5,       KC_6,           KC_7,       KC_8,           KC_9,         KC_0,           _______,
-			_______, LSFT(KC_LBRC), LSFT(KC_9), LSFT(KC_0),     LSFT(KC_RBRC), LSFT(KC_3), LSFT(KC_5),     LSFT(KC_6), KC_LBRC,        KC_RBRC,      LSFT(KC_4),     LSFT(KC_BSLASH),
+			_______, LSFT(KC_LBRC), LSFT(KC_9), LSFT(KC_0),     LSFT(KC_RBRC), LSFT(KC_3), LSFT(KC_5),     LSFT(KC_6), KC_LBRC,        KC_RBRC,      LSFT(KC_4),     LSFT(KC_BACKSLASH),
 			_______, LSFT(KC_7),    LSFT(KC_8), LSFT(KC_EQUAL), KC_EQUAL,      LSFT(KC_2), LSFT(KC_GRAVE), _______,    LSFT(KC_COMMA), LSFT(KC_DOT), LSFT(KC_QUOTE), _______,
 			_______, _______,       _______,    _______,        _______,       /***/       _______,        _______,    _______,        _______,      _______,        _______
 			),
 
 
 	[MACRO] = LAYOUT_planck_mit(
-			M_F12,     M_F1,      M_F2,        M_F3,     M_F4,        M_F5,     M_F6,    M_F7,     M_F8,         M_F9,          M_F10,   M_F11,
-			M_COMPOSE, M_CEDILLA, M_DEADGRAVE, M_UMLAUT, M_DEADACUTE, M_FEMI,   M_MASC,  M_CIRCUM, M_DQUOTELEFT, M_DQUOTERIGHT, M_TILDE, KC_INS,
-			_______,   _______,   _______,     _______,  _______,     M_DEGREE, _______, _______,  M_GLEFT,      M_GRIGHT,      _______, _______,
-			XXXXXXX,   XXXXXXX,   XXXXXXX,     XXXXXXX,  _______,     /***/     _______, XXXXXXX,  XXXXXXX,      _______,       _______, RESET
+			M_F12,     M_F1,    M_F2,        M_F3,        M_F4,     M_F5,              M_F6,    M_F7,     M_F8,      M_F9,    M_F10,   M_F11,
+			M_COMPOSE, XXXXXXX, M_DEADACUTE, M_DEADGRAVE, M_UMLAUT, XXXXXXX,           XXXXXXX, M_CIRCUM, XXXXXXX,   XXXXXXX, XXXXXXX, KC_INS,
+			XXXXXXX,   XXXXXXX, XXXXXXX,     XXXXXXX,     XXXXXXX,  XXXXXXX,           M_TILDE, XXXXXXX,  M_CEDILLA, XXXXXXX, XXXXXXX, XXXXXXX,
+			XXXXXXX,   XXXXXXX, XXXXXXX,     XXXXXXX,     _______,  /***/     XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,   XXXXXXX, QK_BOOTLOADER
 			),
 
 
@@ -91,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-uint32_t layer_state_set_user(uint32_t state) {
+layer_state_t layer_state_set_user(layer_state_t state) {
 	state = update_tri_layer_state(state, SHIFT, SYMBOL, MACRO);
 	return state;
 }
