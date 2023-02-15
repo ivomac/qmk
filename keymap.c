@@ -81,10 +81,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 	[MOUSE] = LAYOUT_planck_mit(
-			_______, XXXXXXX, KC_MS_WH_DOWN, KC_MS_WH_UP, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX,      XXXXXXX,      XXXXXXX,      XXXXXXX,     _______,
-			XXXXXXX, XXXXXXX, KC_MS_BTN3,    KC_MS_BTN1,  KC_MS_BTN2, _______, _______, KC_MS_LEFT,   KC_MS_DOWN,   KC_MS_UP,     KC_MS_RIGHT, XXXXXXX,
-			_______, XXXXXXX, KC_MS_BTN5,    KC_MS_BTN4,  _______,    _______, _______, KC_MS_ACCEL0, KC_MS_ACCEL1, KC_MS_ACCEL2, XXXXXXX,     _______,
-			_______, _______, _______,       _______,     KC_LEFT_SHIFT,    /***/    _______, XXXXXXX, _______,      _______,      _______,      _______
+			_______, XXXXXXX, KC_MS_WH_DOWN, KC_MS_WH_UP, XXXXXXX,       XXXXXXX,          XXXXXXX, XXXXXXX,    XXXXXXX,    XXXXXXX,  XXXXXXX,     _______,
+			XXXXXXX, XXXXXXX, KC_MS_BTN3,    KC_MS_BTN1,  KC_MS_BTN2,    _______,          _______, KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, XXXXXXX,
+			_______, XXXXXXX, KC_MS_BTN5,    KC_MS_BTN4,  _______,       _______,          _______, XXXXXXX,    XXXXXXX,    XXXXXXX,  XXXXXXX,     _______,
+			_______, _______, _______,       _______,     KC_LEFT_SHIFT, /***/    _______, XXXXXXX, _______,    _______,    _______,  _______
 			),
 
 
