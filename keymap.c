@@ -13,6 +13,7 @@ enum planck_layers {
 	SYMBOL,
 	MACRO,
 	MOUSE,
+	SYSREQ,
 };
 
 enum custom_keycodes {
@@ -76,18 +77,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			M_F12,     M_F1,    M_F2,        M_F3,        M_F4,     M_F5,              M_F6,    M_F7,     M_F8,      M_F9,    M_F10,   M_F11,
 			M_COMPOSE, XXXXXXX, M_DEADACUTE, M_DEADGRAVE, M_UMLAUT, XXXXXXX,           XXXXXXX, M_CIRCUM, XXXXXXX,   XXXXXXX, XXXXXXX, KC_INS,
 			XXXXXXX,   XXXXXXX, XXXXXXX,     XXXXXXX,     XXXXXXX,  XXXXXXX,           M_TILDE, XXXXXXX,  M_CEDILLA, XXXXXXX, XXXXXXX, XXXXXXX,
-			XXXXXXX,   XXXXXXX, XXXXXXX,     XXXXXXX,     _______,  /***/     XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,   XXXXXXX, QK_BOOTLOADER
+			TG(SYSREQ),   XXXXXXX, XXXXXXX,     XXXXXXX,     _______,  /***/     XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,   XXXXXXX, QK_BOOTLOADER
 			),
 
 
 	[MOUSE] = LAYOUT_planck_mit(
-			_______, XXXXXXX, KC_MS_WH_DOWN, KC_MS_WH_UP, XXXXXXX,       XXXXXXX,          XXXXXXX, XXXXXXX,    XXXXXXX,    XXXXXXX,  XXXXXXX,     _______,
-			XXXXXXX, XXXXXXX, KC_MS_BTN3,    KC_MS_BTN1,  KC_MS_BTN2,    _______,          _______, KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, XXXXXXX,
-			_______, XXXXXXX, KC_MS_BTN5,    KC_MS_BTN4,  _______,       _______,          _______, XXXXXXX,    XXXXXXX,    XXXXXXX,  XXXXXXX,     _______,
-			_______, _______, _______,       _______,     KC_LEFT_SHIFT, /***/    _______, XXXXXXX, _______,    _______,    _______,  _______
+			_______, KC_KP_1,    KC_KP_2,    KC_KP_3,    KC_KP_4,       KC_KP_5,          KC_KP_6, KC_KP_7,       KC_KP_8,     KC_KP_9,  KC_KP_0,     _______,
+			XXXXXXX, KC_MS_BTN4, KC_MS_BTN3, KC_MS_BTN1, KC_MS_BTN2,    XXXXXXX,          XXXXXXX, KC_MS_LEFT,    KC_MS_DOWN,  KC_MS_UP, KC_MS_RIGHT, XXXXXXX,
+			_______, KC_MS_BTN8, KC_MS_BTN7, KC_MS_BTN6, KC_MS_BTN5,    XXXXXXX,          XXXXXXX, KC_MS_WH_DOWN, KC_MS_WH_UP, XXXXXXX,  XXXXXXX,     _______,
+			_______, _______,    _______,    _______,    KC_LEFT_SHIFT, /***/    _______, XXXXXXX, _______,       _______,     _______,  _______
 			),
 
-
+	[SYSREQ] = LAYOUT_planck_mit(
+			XXXXXXX,    XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, XXXXXXX,
+			XXXXXXX,    XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+			XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR,
+			TG(SYSREQ), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, /***/    XXXXXXX, XXXXXXX, XXXXXXX, KC_LCTL, KC_LALT, KC_SYRQ
+			),
 
 };
 
