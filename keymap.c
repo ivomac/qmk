@@ -60,46 +60,46 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[L0_QWERTY] = LAYOUT_planck_mit(
-			KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,            KC_T, KC_Y,   KC_U,     KC_I,    KC_O,    KC_P,     KC_BSPC,
-			KC_SLASH, KC_A,    KC_S,    KC_D,    KC_F,            KC_G, KC_M,   KC_H,     KC_J,    KC_K,    KC_L,     KC_BACKSLASH,
-			KC_ESC,   KC_Z,    KC_X,    KC_C,    KC_V,            KC_B, KC_N,   KC_MINUS, KC_COMM, KC_DOT,  KC_QUOTE, KC_ENT,
-			KC_LEFT,  KC_DOWN, KC_LALT, KC_LCTL, LM(L1,MOD_LSFT), /***/ KC_SPC, MO(L2),   KC_LGUI, KC_RALT, KC_UP,    KC_RGHT
+			KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,  KC_T,      KC_Y,         KC_U,     KC_I,    KC_O,    KC_P,     KC_BSPC,
+			KC_SLASH, KC_A,    KC_S,    KC_D,    KC_F,  KC_G,      KC_M,         KC_H,     KC_J,    KC_K,    KC_L,     KC_BACKSLASH,
+			KC_ESC,   KC_Z,    KC_X,    KC_C,    KC_V,  KC_B,      KC_N,         KC_MINUS, KC_COMM, KC_DOT,  KC_QUOTE, KC_ENT,
+			KC_LEFT,  KC_DOWN, KC_LALT, KC_LCTL, LM(L1, MOD_LSFT), /***/ KC_SPC, MO(L2),   KC_LGUI, KC_RALT, KC_UP,    KC_RGHT
 			),
 
 	[L0_COLEMAK] = LAYOUT_planck_mit(
-			KC_TAB,   KC_Q,    KC_W,     KC_F,     KC_P,            KC_X, KC_J,   KC_L,   KC_U,    KC_Y,    KC_Z,  KC_BSPC,
-			KC_SLASH, KC_A,    KC_R,     KC_S,     KC_T,            KC_G, KC_M,   KC_N,   KC_E,    KC_I,    KC_O,  KC_BACKSLASH,
-			KC_ESC,   KC_V,    KC_QUOTE, KC_MINUS, KC_D,            KC_C, KC_B,   KC_H,   KC_COMM, KC_DOT,  KC_K,  KC_ENT,
-			KC_LEFT,  KC_DOWN, KC_LALT,  KC_LCTL,  LM(L1,MOD_LSFT), /***/ KC_SPC, MO(L2), KC_LGUI, KC_RALT, KC_UP, KC_RGHT
+			KC_TAB,   KC_Q,    KC_W,     KC_F,     KC_P,  KC_X,      KC_J,         KC_L,   KC_U,    KC_Y,    KC_Z,  KC_BSPC,
+			KC_SLASH, KC_A,    KC_R,     KC_S,     KC_T,  KC_G,      KC_M,         KC_N,   KC_E,    KC_I,    KC_O,  KC_BACKSLASH,
+			KC_ESC,   KC_V,    KC_QUOTE, KC_MINUS, KC_D,  KC_C,      KC_B,         KC_H,   KC_COMM, KC_DOT,  KC_K,  KC_ENT,
+			KC_LEFT,  KC_DOWN, KC_LALT,  KC_LCTL,  LM(L1, MOD_LSFT), /***/ KC_SPC, MO(L2), KC_LGUI, KC_RALT, KC_UP, KC_RGHT
 			),
 
 	[L1] = LAYOUT_planck_mit(
 			_______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,      _______, _______,
-			_______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,      _______, _______,
+			_______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,      _______, KC_1,
 			_______, _______, _______, _______, _______, _______, _______, _______, M_SCOLON, KC_SEMICOLON, _______, _______,
 			_______, _______, _______, _______, _______, /***/    _______, _______, _______,  _______,      _______, _______
 			),
 
 	[L2] = LAYOUT_planck_mit(
 			_______,    KC_1,          KC_2,       KC_3,           KC_4,          KC_5,                KC_6,       KC_7,       KC_8,           KC_9,         KC_0,       _______,
-			LSFT(KC_1), LSFT(KC_LBRC), LSFT(KC_9), LSFT(KC_0),     LSFT(KC_RBRC), LSFT(KC_3),          LSFT(KC_8), LSFT(KC_6), KC_LBRC,        KC_RBRC,      LSFT(KC_4), LSFT(KC_5),
+			LSFT(KC_5), LSFT(KC_LBRC), LSFT(KC_9), LSFT(KC_0),     LSFT(KC_RBRC), LSFT(KC_3),          LSFT(KC_8), LSFT(KC_6), KC_LBRC,        KC_RBRC,      LSFT(KC_4), LSFT(KC_BACKSLASH),
 			_______,    XXXXXXX,       LSFT(KC_7), LSFT(KC_EQUAL), KC_EQUAL,      LSFT(KC_GRAVE),      LSFT(KC_2), KC_GRAVE,   LSFT(KC_COMMA), LSFT(KC_DOT), _______,    _______,
 			_______,    _______,       _______,    _______,        _______,       /***/       _______, _______,    _______,    _______,        _______,      _______
 			),
 
 
 	[L3] = LAYOUT_planck_mit(
-			_______, M_F1,         M_F2,        M_F3,        M_F4,     M_F5,         M_F6,        M_F7,      M_F8,          M_F9,         M_F10,       KC_DEL,
-			COMPOSE, M_PM,      M_DASH,     M_CDOT,      M_BULLET, M_DEADGREEK,  M_TIMES,     M_DEADCIRCUM, M_DEF,         M_DEADDOT,    M_DEADSLASH,        KC_INS,
-			_______, XXXXXXX, M_DEADACUTE, M_DEADBAR, M_APPROX, M_DEADTILDE, XXXXXXX, M_DEADGRAVE,    M_DEADCEDILLA, M_DEADUMLAUT, XXXXXXX, _______,
-			KC_PSCR, KC_SYRQ,      XXXXXXX,     XXXXXXX,     _______,  /***/         TG(MOUSE),   _______,   XXXXXXX,       XXXXXXX,      M_BASETG,    QK_BOOTLOADER
+			_______, M_F1,    M_F2,        M_F3,      M_F4,     M_F5,                    M_F6,    M_F7,         M_F8,          M_F9,         M_F10,       KC_DEL,
+			COMPOSE, M_PM,    M_DASH,      M_CDOT,    M_BULLET, M_DEADGREEK,             M_TIMES, M_DEADCIRCUM, M_DEF,         M_DEADDOT,    M_DEADSLASH, KC_INS,
+			_______, XXXXXXX, M_DEADACUTE, M_DEADBAR, M_APPROX, M_DEADTILDE,             XXXXXXX, M_DEADGRAVE,  M_DEADCEDILLA, M_DEADUMLAUT, XXXXXXX,     _______,
+			KC_PSCR, KC_SYRQ, XXXXXXX,     XXXXXXX,   _______,  /***/         TG(MOUSE), _______, XXXXXXX,      XXXXXXX,       M_BASETG,     QK_BOOTLOADER
 			),
 
 	[MOUSE] = LAYOUT_planck_mit(
-			_______, _______,    KC_MS_WH_DOWN, KC_MS_WH_UP, _______,       _______, _______, _______,    _______,    _______,  _______,     _______,
-			XXXXXXX, KC_MS_BTN4, KC_MS_BTN3,    KC_MS_BTN1,  KC_MS_BTN2,    XXXXXXX, XXXXXXX, KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, XXXXXXX,
-			_______, KC_MS_BTN8, KC_MS_BTN7,    KC_MS_BTN6,  KC_MS_BTN5,    XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX,    XXXXXXX,  XXXXXXX,     _______,
-			_______, _______,    _______,       _______,     KC_LEFT_SHIFT, /***/    _______, TG(MOUSE),  _______,    _______,  _______,     _______
+			_______, _______,    KC_MS_WH_DOWN, KC_MS_WH_UP, _______,       _______,          _______,   _______,    _______,    _______,  _______,     _______,
+			XXXXXXX, KC_MS_BTN4, KC_MS_BTN3,    KC_MS_BTN1,  KC_MS_BTN2,    XXXXXXX,          XXXXXXX,   KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, XXXXXXX,
+			_______, KC_MS_BTN8, KC_MS_BTN7,    KC_MS_BTN6,  KC_MS_BTN5,    XXXXXXX,          XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,  XXXXXXX,     _______,
+			_______, _______,    _______,       _______,     KC_LEFT_SHIFT, /***/    _______, TG(MOUSE), _______,    _______,    _______,  _______
 			),
 
 };
