@@ -81,18 +81,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			),
 
 	[L2] = LAYOUT_planck_mit(
-			_______,    KC_1,          KC_2,       KC_3,           KC_4,          KC_5,                KC_6,       KC_7,       KC_8,           KC_9,         KC_0,       _______,
-			LSFT(KC_5), LSFT(KC_LBRC), LSFT(KC_9), LSFT(KC_0),     LSFT(KC_RBRC), LSFT(KC_3),          LSFT(KC_8), LSFT(KC_6), KC_LBRC,        KC_RBRC,      LSFT(KC_4), LSFT(KC_BACKSLASH),
-			_______,    XXXXXXX,       LSFT(KC_7), LSFT(KC_EQUAL), KC_EQUAL,      LSFT(KC_GRAVE),      LSFT(KC_2), KC_GRAVE,   LSFT(KC_COMMA), LSFT(KC_DOT), _______,    _______,
-			_______,    _______,       _______,    _______,        _______,       /***/       _______, _______,    _______,    _______,        _______,      _______
+			_______,    KC_1,          KC_2,       KC_3,           KC_4,          KC_5,           KC_6,       KC_7,       KC_8,           KC_9,         KC_0,       _______,
+			LSFT(KC_5), LSFT(KC_LBRC), LSFT(KC_9), LSFT(KC_0),     LSFT(KC_RBRC), LSFT(KC_3),     LSFT(KC_8), LSFT(KC_6), KC_LBRC,        KC_RBRC,      LSFT(KC_4), LSFT(KC_BACKSLASH),
+			_______,    XXXXXXX,       LSFT(KC_7), LSFT(KC_EQUAL), KC_EQUAL,      LSFT(KC_2), LSFT(KC_GRAVE), KC_GRAVE,   LSFT(KC_COMMA), LSFT(KC_DOT), XXXXXXX,    _______,
+			_______,    _______,       _______,    _______,        _______,       /***/           _______,    _______,    _______,        _______,      _______,    _______
 			),
 
 
 	[L3] = LAYOUT_planck_mit(
-			_______, M_F1,    M_F2,    M_F3,      M_F4,     M_F5,        M_F6,      M_F7,         M_F8,          M_F9,         M_F10,       KC_DEL,
-			COMPOSE, M_PM,    M_DASH,  M_CDOT,    M_BULLET, M_DEADGREEK, M_TIMES,   M_DEADCIRCUM, M_DEF,         M_DEADDOT,    M_DEADSLASH, KC_INS,
-			_______, XXXXXXX, XXXXXXX, M_DEADBAR, M_APPROX, M_DEADTILDE, XXXXXXX,   M_DEADGRAVE,  M_DEADCEDILLA, M_DEADUMLAUT, M_DEADACUTE, _______,
-			KC_PSCR, KC_SYRQ, XXXXXXX, XXXXXXX,   _______,  /***/        TG(MOUSE), _______,      XXXXXXX,       XXXXXXX,      M_BASETG,    QK_BOOTLOADER
+			_______, M_F1,    M_F2,    M_F3,      M_F4,     M_F5,        M_F6,        M_F7,         M_F8,          M_F9,         M_F10,       KC_DEL,
+			COMPOSE, M_PM,    M_DASH,  M_CDOT,    M_BULLET, M_DEADGREEK, M_TIMES,     M_DEADCIRCUM, M_DEF,         M_DEADDOT,    M_DEADSLASH, KC_INS,
+			_______, XXXXXXX, XXXXXXX, M_DEADBAR, M_APPROX, XXXXXXX,     M_DEADTILDE, M_DEADGRAVE,  M_DEADCEDILLA, M_DEADUMLAUT, M_DEADACUTE, _______,
+			KC_PSCR, KC_SYRQ, XXXXXXX, XXXXXXX,   _______,  /***/        TG(MOUSE),   _______,      XXXXXXX,       XXXXXXX,      M_BASETG,    QK_BOOTLOADER
 			),
 
 	[MOUSE] = LAYOUT_planck_mit(
