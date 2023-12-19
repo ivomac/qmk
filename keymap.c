@@ -21,6 +21,7 @@ enum planck_layers {
 	L2,
 	L3,
 	MOUSE,
+	SPACE_MOUSE,
 };
 
 enum custom_keycodes {
@@ -92,14 +93,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			_______, M_F1,    M_F2,    M_F3,      M_F4,     M_F5,        M_F6,        M_F7,         M_F8,          M_F9,         M_F10,       KC_DEL,
 			COMPOSE, M_PM,    M_DASH,  M_CDOT,    M_BULLET, M_DEADGREEK, M_TIMES,     M_DEADCIRCUM, M_DEF,         M_DEADDOT,    M_DEADSLASH, KC_INS,
 			_______, XXXXXXX, XXXXXXX, M_DEADBAR, M_APPROX, XXXXXXX,     M_DEADTILDE, M_DEADGRAVE,  M_DEADCEDILLA, M_DEADUMLAUT, M_DEADACUTE, _______,
-			KC_PSCR, KC_SYRQ, XXXXXXX, XXXXXXX,   _______,  /***/        TG(MOUSE),   _______,      XXXXXXX,       XXXXXXX,      M_BASETG,    QK_BOOTLOADER
+			KC_PSCR, KC_SYRQ, XXXXXXX,       XXXXXXX,   _______,  /***/        _______,   _______,      TG(MOUSE), TG(SPACE_MOUSE),      M_BASETG,    QK_BOOTLOADER
 			),
 
 	[MOUSE] = LAYOUT_planck_mit(
 			_______, _______,    KC_MS_WH_DOWN, KC_MS_WH_UP, _______,       _______,          _______,   _______,    _______,    _______,  _______,     _______,
 			XXXXXXX, KC_MS_BTN4, KC_MS_BTN3,    KC_MS_BTN1,  KC_MS_BTN2,    XXXXXXX,          XXXXXXX,   KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, XXXXXXX,
 			_______, KC_MS_BTN8, KC_MS_BTN7,    KC_MS_BTN6,  KC_MS_BTN5,    XXXXXXX,          XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,  XXXXXXX,     _______,
-			_______, _______,    _______,       _______,     KC_LEFT_SHIFT, /***/    _______, TG(MOUSE), _______,    _______,    _______,  _______
+			_______, _______,    _______,       _______,     KC_LEFT_SHIFT, /***/    _______, XXXXXXX, TG(MOUSE),    _______,    _______,  _______
+			),
+
+	[SPACE_MOUSE] = LAYOUT_planck_mit(
+			KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,  KC_T,      KC_Y,         KC_U,     KC_I,    KC_O,    KC_P,     KC_BSPC,
+			KC_LCTL,  KC_A,    KC_S,    KC_D,    KC_F,  KC_G,      KC_M,         KC_H,     KC_J,    KC_K,    KC_L,     KC_ESC,
+			KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,  KC_B,      KC_N,         KC_MINUS, KC_COMM, KC_DOT,  KC_QUOTE, KC_ENT,
+			_______, _______,    _______,       KC_MS_BTN2,     KC_MS_BTN1, /***/    KC_SPC, KC_MS_BTN3, _______,    TG(SPACE_MOUSE),    _______,  _______
 			),
 
 };
