@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			_______, M_F1,    M_F2,    M_F3,      M_F4,     M_F5,        M_F6,        M_F7,         M_F8,          M_F9,         M_F10,       KC_DEL,
 			COMPOSE, M_PM,    M_DASH,  M_CDOT,    M_BULLET, M_DEADGREEK, M_TIMES,     M_DEADCIRCUM, M_DEF,         M_DEADDOT,    M_DEADSLASH, KC_INS,
 			_______, XXXXXXX, XXXXXXX, M_DEADBAR, M_APPROX, XXXXXXX,     M_DEADTILDE, M_DEADGRAVE,  M_DEADCEDILLA, M_DEADUMLAUT, M_DEADACUTE, _______,
-			KC_PSCR, KC_SYRQ, XXXXXXX,       XXXXXXX,   _______,  /***/        _______,   _______,      TG(MOUSE), TG(SPACE_MOUSE),      M_BASETG,    QK_BOOTLOADER
+			KC_PSCR, KC_SYRQ, _______,       _______,   _______,  /***/        _______,   _______,      TG(MOUSE), TG(SPACE_MOUSE),      M_BASETG,    QK_BOOTLOADER
 			),
 
 	[MOUSE] = LAYOUT_planck_mit(
